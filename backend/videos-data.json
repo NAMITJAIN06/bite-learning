@@ -1,0 +1,142 @@
+{
+  "users": [
+    {
+      "id": "user1",
+      "username": "educator1",
+      "email": "edu@example.com",
+      "type": "creator",
+      "followers": 120
+    }
+  ],
+  "videos": [
+    {
+      "id": "1764851481973",
+      "title": "new",
+      "description": "new",
+      "topic": "Programming",
+      "skill_level": "Beginner",
+      "creator_id": "user1",
+      "video_url": "https://www.youtube.com/embed/p3vaaD9pn9I",
+      "thumbnail": "https://via.placeholder.com/300x200?text=new",
+      "duration": "1:30",
+      "views": 0,
+      "likes": 0,
+      "timestamp": "2025-12-04T12:31:21.973Z",
+      "comments": []
+    },
+    {
+      "id": "1764850415033",
+      "title": "network",
+      "description": "network",
+      "topic": "Programming",
+      "skill_level": "Beginner",
+      "creator_id": "user1",
+      "video_url": "https://www.youtube.com/shorts/WzUvSri_n3Y",
+      "thumbnail": "https://via.placeholder.com/300x200?text=network",
+      "duration": "1:30",
+      "views": 0,
+      "likes": 0,
+      "timestamp": "2025-12-04T12:13:35.033Z",
+      "comments": []
+    },
+    {
+      "id": "1764850310002",
+      "title": "cyber security roadmap",
+      "description": "cyber security roadmap",
+      "topic": "Programming",
+      "skill_level": "Beginner",
+      "creator_id": "user1",
+      "video_url": "https://www.youtube.com/shorts/rjT3vmeRy58",
+      "thumbnail": "https://via.placeholder.com/300x200?text=cyber%20security%20roadmap",
+      "duration": "1:30",
+      "views": 0,
+      "likes": 0,
+      "timestamp": "2025-12-04T12:11:50.002Z",
+      "comments": []
+    },
+    {
+      "id": "1764850155979",
+      "title": "computer network",
+      "description": "CN",
+      "topic": "Programming",
+      "skill_level": "Beginner",
+      "creator_id": "user1",
+      "video_url": "https://www.youtube.com/watch?v=p3vaaD9pn9I",
+      "thumbnail": "https://via.placeholder.com/300x200?text=computer%20network",
+      "duration": "1:30",
+      "views": 0,
+      "likes": 0,
+      "timestamp": "2025-12-04T12:09:15.979Z",
+      "comments": []
+    },
+    {
+      "id": "vid1",
+      "title": "JavaScript Basics in 60 sec",
+      "description": "Learn JS variables and functions",
+      "creator_id": "user1",
+      "duration": 60,
+      "topic": "Programming",
+      "skill_level": "Beginner",
+      "views": 234,
+      "thumbnail": "https://via.placeholder.com/300x200?text=JS+Basics",
+      "video_url": "https://www.youtube.com/embed/PkZNo7MFNFg",
+      "created_at": "2025-12-03T12:07:53.745Z",
+      "likes": 45,
+      "comments": []
+    },
+    {
+      "id": "vid2",
+      "title": "Python List Comprehension",
+      "description": "Master Python lists in 90 seconds",
+      "creator_id": "user1",
+      "duration": 90,
+      "topic": "Programming",
+      "skill_level": "Intermediate",
+      "views": 567,
+      "thumbnail": "https://via.placeholder.com/300x200?text=Python",
+      "video_url": "https://www.youtube.com/embed/DZ4sSfXtpQU",
+      "created_at": "2025-12-02T12:07:53.745Z",
+      "likes": 123,
+      "comments": []
+    },
+    {
+      "id": "vid3",
+      "title": "React Hooks Explained",
+      "description": "Understanding React Hooks in under 2 minutes",
+      "creator_id": "user1",
+      "duration": 120,
+      "topic": "Programming",
+      "skill_level": "Advanced",
+      "views": 890,
+      "thumbnail": "https://via.placeholder.com/300x200?text=React",
+      "video_url": "https://www.youtube.com/embed/TNhaISOUy6Q",
+      "created_at": "2025-12-01T12:07:53.745Z",
+      "likes": 256,
+      "comments": []
+    }
+  ],
+  "courses": [
+    {
+      "id": "course1",
+      "title": "Web Development 101",
+      "creator_id": "user1",
+      "videos": [
+        "vid1",
+        "vid2"
+      ],
+      "description": "Complete web dev basics",
+      "created_at": "2025-12-04T12:07:53.745Z"
+    }
+  ],
+  "creators": [
+    {
+      "id": "user1",
+      "username": "educator1",
+      "bio": "Teaching technology one video at a time",
+      "followers": 120,
+      "avatar": "👨‍🏫",
+      "email": "edu@example.com",
+      "type": "creator"
+    }
+  ]
+}

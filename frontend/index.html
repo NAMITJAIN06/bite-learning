@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bite Learning - Short-Form Education</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">🎬 Bite Learning</div>
+        <div class="nav-links">
+          <button class="nav-btn active" data-view="feed">Feed</button>
+          <button class="nav-btn" data-view="explore">Explore</button>
+          <button class="nav-btn" data-view="creator">Create</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="main-container">
+      
+      <!-- FEED VIEW -->
+      <div id="feed-view" class="view active">
+        <div class="feed-header">
+          <h1>Your Personalized Learning Feed</h1>
+          <p>Bite-sized lessons, unlimited growth</p>
+          
+          <div class="feed-filters">
+            <select id="topic-filter" class="filter-select">
+              <option value="">All Topics</option>
+              <option value="Programming">Programming</option>
+              <option value="Business">Business</option>
+              <option value="Design">Design</option>
+            </select>
+            
+            <select id="level-filter" class="filter-select">
+              <option value="">All Levels</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+            
+            <input 
+              type="text" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search videos..."
+            >
+          </div>
+        </div>
+
+        <div id="videos-feed" class="videos-grid">
+          <!-- Videos will load here -->
+        </div>
+      </div>
+
+      <!-- EXPLORE VIEW -->
+      <div id="explore-view" class="view">
+        <div class="explore-header">
+          <h1>Explore Creators</h1>
+          <p>Learn from the best educators</p>
+        </div>
+        
+        <div id="creators-list" class="creators-grid">
+          <!-- Creators will load here -->
+        </div>
+      </div>
+
+      <!-- CREATOR VIEW -->
+      <div id="creator-view" class="view">
+        <div class="creator-header">
+          <h1>Become a Creator</h1>
+          <p>Share your knowledge and inspire learners</p>
+        </div>
+        
+        <form id="upload-form" class="upload-form">
+          <h2>Upload Your Lesson</h2>
+          
+          <div class="form-group">
+            <label>Video Title *</label>
+            <input type="text" id="video-title" placeholder="e.g., JavaScript Basics" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Description</label>
+            <textarea id="video-description" placeholder="What will learners learn?"></textarea>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>Topic</label>
+              <select id="video-topic">
+                <option value="Programming">Programming</option>
+                <option value="Business">Business</option>
+                <option value="Design">Design</option>
+                <option value="Languages">Languages</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Skill Level</label>
+              <select id="video-level">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Video URL (YouTube embed)</label>
+            <input 
+              type="text" 
+              id="video-url" 
+              placeholder="e.g., https://www.youtube.com/embed/..."
+            >
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Upload Lesson</button>
+          <div id="upload-message"></div>
+        </form>
+      </div>
+
+    </main>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal hidden">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        
+        <div class="modal-body">
+          <div class="video-player">
+            <iframe 
+              id="video-iframe" 
+              width="100%" 
+              height="400" 
+              frameborder="0" 
+              allow="autoplay; encrypted-media" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          
+          <div class="video-info">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            
+            <div class="video-stats">
+              <span class="stat">👁️ <span id="modal-views">0</span> views</span>
+              <span class="stat">❤️ <span id="modal-likes">0</span> likes</span>
+              <span class="stat">⏱️ <span id="modal-duration">60</span>s</span>
+            </div>
+            
+            <div class="video-actions">
+              <button id="like-btn" class="action-btn">❤️ Like</button>
+              <button id="comment-btn" class="action-btn">💬 Comment</button>
+              <button id="share-btn" class="action-btn">📤 Share</button>
+            </div>
+            
+            <div class="comments-section">
+              <h3>Comments</h3>
+              
+              <div class="comment-input">
+                <input 
+                  type="text" 
+                  id="comment-text" 
+                  placeholder="Add a comment..."
+                >
+                <button id="post-comment-btn" class="btn-small">Post</button>
+              </div>
+              
+              <div id="comments-list" class="comments-list">
+                <!-- Comments will load here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
