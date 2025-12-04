@@ -1,0 +1,7 @@
+[build]
+  base = "frontend"
+  publish = "frontend"
+  command = ""
+
+[build.environment]
+  SKIP_BUILD = "true"
